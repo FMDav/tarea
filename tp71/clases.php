@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>TRABAJO 70</title>
+        <title>TRABAJO 71</title>
     </head>
     <body>
         <?php
@@ -17,11 +17,12 @@
                 public function CalcularArea(){
                     return ($this -> ancho * $this -> largo);
                 }
+                public function MostrarDatos(){
+                    return (("Perimetro: ") . $rectangulo -> CalcularPerimetro() . "<br>").(("Area: ") . $rectangulo -> CalcularArea() . "<br>");
+                }
             }
-            //mostrar
             $rectangulo = new CRectangulo ($_POST['ancho'],$_POST['largo']);
-            echo ("Perimetro: ") . $rectangulo -> CalcularPerimetro() . "<br>";
-            echo ("Area: ") . $rectangulo -> CalcularArea() . "<br>";
+            echo $rectangulo -> MostrarDatos();
         ?>
     </body>
 </html>
